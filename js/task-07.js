@@ -1,18 +1,8 @@
-const textInput = document.querySelector("#font-size-control");
-console.log(textInput);
+document.querySelector('body').style.backgroundColor = '#eaf1fad0';
+const inputRangeRef = document.getElementById('font-size-control');
+const textRef = document.getElementById('text');
 
-const spanText = document.querySelector("#text");
-console.log(spanText);
+const fontSizeControl = ({ currentTarget }) =>
+  (textRef.style.fontSize = `${currentTarget.value}px`);
 
-textInput.addEventListener("input", handleInput);
-
-function handleInput(event) {
-	const textInputValue = event.currentTarget.value;
-	console.log(textInputValue);
-	const spanTextValue = event.currentTarget.value;
-	console.log(spanTextValue);
-		
-		if (textInputValue === spanTextValue) {
-			spanTextValue = font - size;
-		}
-	}
+inputRangeRef.addEventListener('input', fontSizeContro);
